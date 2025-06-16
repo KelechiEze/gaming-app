@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.hero-section {
+  min-height: 80vh;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hero-content {
+  z-index: 2;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.platform-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.platform-btn {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  border-radius: 25px;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.platform-btn:hover {
+  background: #FFFFFF;
+  color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.cta-button {
+  background: #7E3AF2;
+  border: none;
+  border-radius: 25px;
+  padding: 1rem 2.5rem;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  display: block;
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.cta-button:hover {
+  background: #6D28D9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(126, 58, 242, 0.4);
+}
+
+.price-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  animation: fadeInUp 0.8s ease 0.8s both;
+}
+
+.hero-image-container {
+  position: relative;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slide-image.active {
+  opacity: 1;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(126, 58, 242, 0.2) 100%);
+}
+
+.slide-navigation {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6b7280;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+  background: #FFFFFF;
+  transform: scale(1.2);
+}
+
+.nav-dot:hover {
+  background: #d1d5db;
+  transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    min-height: auto;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .platform-buttons {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .platform-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+  }
+  
+  .hero-image-container {
+    height: 400px;
+    order: -1;
+  }
+  
+  .hero-text {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .hero-image-container {
+    height: 300px;
+  }
+  
+  .platform-buttons {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,37 @@
+.layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.main-content {
+  background: #0a0a0a;
+}
+
+.content-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.hero-area {
+  min-height: 80vh;
+}
+
+.sidebar-area {
+  padding: 2rem 0;
+}
+
+@media (max-width: 800px) {
+  .content-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 0.5rem;
+  }
+  
+  .sidebar-area {
+    padding: 1rem 0;
+  }
+}
