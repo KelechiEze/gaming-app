@@ -18,7 +18,7 @@ const HeroSection = () => {
       id: 2,
       title: "CYBERPUNK 2077",
       description: "Experience the most immersive open-world RPG in the futuristic Night City.",
-      image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80",
+      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=2070&q=80",
       price: "USD 59.99+"
     },
     {
