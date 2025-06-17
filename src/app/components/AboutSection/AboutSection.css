@@ -1,0 +1,56 @@
+.about-section {
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: white;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.about-paragraph1 {
+  color: #4b5563; /* Tailwind's gray-700 */
+  font-size: 0.8rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Typography */
+@media (min-width: 640px) {
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-paragraph1 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: 3rem;
+  }
+
+  .about-paragraph1 {
+    font-size: 0.8rem;
+  }
+
+  .heading-break {
+    display: inline;
+  }
+}
+
+@media (max-width: 639px) {
+  .heading-break {
+    display: none;
+  }
+}

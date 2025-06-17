@@ -5,7 +5,6 @@ import Link from 'next/link';
 import {
   Search,
   User,
-  Heart,
   ShoppingCart,
   Instagram,
   Youtube,
@@ -240,6 +239,12 @@ const Navbar = () => {
             <Link href="/sales" className="nav-link">
               Sale
             </Link>
+            <Link href="/about" className="nav-link">
+              About
+            </Link>
+            <Link href="/contact" className="nav-link">
+              Contact
+            </Link>
           </div>
 
           {/* Desktop Right Section */}
@@ -256,8 +261,6 @@ const Navbar = () => {
             <div className="social-icons">
               <Instagram size={18} className="social-icon" />
               <Youtube size={18} className="social-icon" />
-              <div className="tiktok-icon">T</div>
-              <div className="discord-icon">D</div>
             </div>
 
             <div className="user-actions">
@@ -267,7 +270,6 @@ const Navbar = () => {
               >
                 <User size={18} className="action-icon" />
               </button>
-              <Heart size={18} className="action-icon" />
               <div className="cart-container">
                 <ShoppingCart size={18} className="action-icon" />
                 <span className="cart-text">0 / £0.00</span>
@@ -296,6 +298,12 @@ const Navbar = () => {
             <Link href="/sale" className="mobile-nav-link">
               Sale
             </Link>
+            <Link href="/about" className="mobile-nav-link">
+              About
+            </Link>
+            <Link href="/contact" className="mobile-nav-link">
+              Contact
+            </Link>
             <div className="mobile-search">
               <Search className="search-icon" size={18} />
               <input
@@ -311,7 +319,6 @@ const Navbar = () => {
               >
                 <User size={18} className="action-icon" />
               </button>
-              <Heart size={18} className="action-icon" />
               <div className="cart-container">
                 <ShoppingCart size={18} className="action-icon" />
                 <span className="cart-text">0 / £0.00</span>
