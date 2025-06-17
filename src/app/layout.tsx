@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Your App Title",
-  description: "Your App Description",
+  title: "LEEGames",
+  description: "Play your fingers out",
 };
 
 export default function RootLayout({
