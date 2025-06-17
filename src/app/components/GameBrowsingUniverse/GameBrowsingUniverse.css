@@ -1,0 +1,198 @@
+.silly-gaming-universe {
+  min-height: 100vh;
+  background: #1e1e1e; /* Dark grey */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  animation: cosmic-fade-in 0.8s ease-out;
+}
+
+
+@keyframes cosmic-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bonkers-header-zone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  margin-top: 60px;
+}
+
+.wacky-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mega-awesome-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  animation: title-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes title-glow {
+  from {
+    text-shadow: 0 0 20px rgba(139, 69, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(139, 69, 255, 0.8), 0 0 40px rgba(139, 69, 255, 0.3);
+  }
+}
+
+.funky-gamepad-icon {
+  width: 40px;
+  height: 40px;
+  color: #8b45ff;
+  animation: gamepad-bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes gamepad-bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+}
+
+.quirky-results-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.zany-sort-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ridiculous-sort-dropdown {
+  background: rgba(139, 69, 255, 0.2);
+  border: 1px solid #8b45ff;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ridiculous-sort-dropdown:hover {
+  background: rgba(139, 69, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.ridiculous-sort-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(139, 69, 255, 0.5);
+}
+
+.sneaky-mobile-filter-toggle {
+  display: none;
+  background: rgba(139, 69, 255, 0.2);
+  border: 2px solid #8b45ff;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sneaky-mobile-filter-toggle:hover {
+  background: rgba(139, 69, 255, 0.4);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.cheeky-filter-icon {
+  width: 24px;
+  height: 24px;
+  color: #8b45ff;
+}
+
+.mad-main-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  animation: container-slide-in 0.6s ease-out 0.2s both;
+}
+
+@keyframes container-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+  .silly-gaming-universe {
+    padding: 15px;
+  }
+
+  .bonkers-header-zone {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .mega-awesome-title {
+    font-size: 2rem;
+    justify-content: center;
+  }
+
+  .quirky-results-info {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sneaky-mobile-filter-toggle {
+    display: block;
+    align-self: center;
+  }
+
+  .mad-main-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .wacky-title-section {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .mega-awesome-title {
+    font-size: 1.8rem;
+  }
+
+  .funky-gamepad-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .quirky-results-info {
+    font-size: 0.8rem;
+  }
+}

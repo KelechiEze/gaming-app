@@ -1,0 +1,104 @@
+.absolutely-mental-game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  animation: grid-fade-in 0.8s ease-out 0.3s both;
+}
+
+@keyframes grid-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hilariously-empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  animation: empty-bounce 1s ease-out;
+}
+
+@keyframes empty-bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.comically-sad-message {
+  text-align: center;
+  background: rgba(139, 69, 255, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px dashed rgba(139, 69, 255, 0.3);
+}
+
+.comically-sad-message h3 {
+  font-size: 1.5rem;
+  color: #8b45ff;
+  margin-bottom: 10px;
+  animation: sad-wobble 2s ease-in-out infinite;
+}
+
+@keyframes sad-wobble {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+.comically-sad-message p {
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1200px) {
+  .absolutely-mental-game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .absolutely-mental-game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .absolutely-mental-game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .absolutely-mental-game-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
