@@ -295,7 +295,7 @@ const Navbar = () => {
             <a href="#" className="mobile-nav-link">
               Games
             </a>
-            <Link href="/sale" className="mobile-nav-link">
+            <Link href="/sales" className="mobile-nav-link">
               Sale
             </Link>
             <Link href="/about" className="mobile-nav-link">
