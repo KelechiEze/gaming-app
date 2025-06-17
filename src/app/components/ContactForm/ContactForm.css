@@ -5,7 +5,7 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #8b5cf6 100%);
   position: relative;
   overflow: hidden;
-  padding: 2rem;
+  padding: 7rem;
   animation: backgroundPulseNuts 6s ease-in-out infinite alternate;
 }
 
@@ -394,10 +394,11 @@
   .robotImageWild {
     width: 250px;
     height: 250px;
+    margin-top: 60px;
   }
 
   .speechBubbleInsane {
-    top: -15px;
+    top: -5px;
     right: -15px;
     padding: 0.75rem;
   }
