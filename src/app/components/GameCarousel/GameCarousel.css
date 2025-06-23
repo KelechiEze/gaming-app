@@ -1,0 +1,390 @@
+.banana-hammock {
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.pancake-stack {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.unicorn-horn {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.glitter-bomb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #00ff00;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sparkle-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff00;
+  border-radius: 50%;
+  animation: sparkle-pulse 2s infinite;
+}
+
+.disco-text {
+  color: #00ff00;
+  font-weight: 700;
+}
+
+.rainbow-spew {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.taco-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nacho-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.taco-wrapper:hover .nacho-arrow {
+  opacity: 1;
+}
+
+.nacho-arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.nacho-left {
+  left: -25px;
+}
+
+.nacho-right {
+  right: -25px;
+}
+
+.burrito-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pizza-slice {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.pizza-slice:hover {
+  transform: scale(1.02);
+}
+
+.hot-dog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.pizza-slice.flipping .hot-dog-image {
+  opacity: 0;
+}
+
+.skittle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 0, 255, 0.3) 40%,
+    rgba(0, 255, 255, 0.3) 50%,
+    rgba(255, 255, 0, 0.3) 60%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.pizza-slice.unicorn-vomit .skittle-overlay {
+  opacity: 1;
+  animation: rainbow-barf 4s linear;
+}
+
+.text-bubble {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  padding: 2rem 2rem 1.5rem;
+  color: #ffffff;
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+}
+
+.text-bubble.jumping {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: jump-up 0.4s ease 0.4s forwards;
+}
+
+.more-cowbell {
+  background: #ff5500;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.more-cowbell:hover {
+  background: #ff6600;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 85, 0, 0.4);
+}
+
+.more-cowbell:active {
+  transform: translateY(0);
+}
+
+.game-scream {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 0.8rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.game-whisper {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 500px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+.dot-party {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.party-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.party-dot.dancing {
+  background: #ff5500;
+  border-color: #ff5500;
+  box-shadow: 0 0 8px rgba(255, 85, 0, 0.5);
+}
+
+.party-dot:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes sparkle-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes rainbow-barf {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+@keyframes jump-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+  .banana-hammock {
+    padding: 0.8rem;
+    min-height: 70vh;
+  }
+
+  .unicorn-horn {
+    margin-bottom: 1.5rem;
+  }
+
+  .rainbow-spew {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .glitter-bomb {
+    font-size: 0.625rem;
+    gap: 0.3rem;
+  }
+
+  .sparkle-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .taco-wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nacho-arrow {
+    position: static;
+    transform: none;
+    width: 45px;
+    height: 45px;
+    opacity: 1;
+    margin: 0.5rem;
+  }
+
+  .nacho-left,
+  .nacho-right {
+    position: static;
+  }
+
+  .burrito-container {
+    height: 350px;
+    width: 100%;
+  }
+
+  .text-bubble {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .game-scream {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .game-whisper {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .more-cowbell {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .dot-party {
+    margin-top: 1.2rem;
+    gap: 0.6rem;
+  }
+
+  .party-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rainbow-spew {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .burrito-container {
+    height: 250px;
+  }
+
+  .game-scream {
+    font-size: 1.3rem;
+  }
+
+  .game-whisper {
+    font-size: 0.75rem;
+  }
+
+  .text-bubble {
+    padding: 1rem 0.8rem 0.8rem;
+  }
+}
